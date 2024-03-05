@@ -16,7 +16,7 @@ const UserSchema = mongoose.Schema({
   },
   role:{
     type :String,
-    enum:[ADMIN,CLIENT]
+    enum:["ADMIN","CLIENT"]
   },
   estado: {
     type: Boolean,
