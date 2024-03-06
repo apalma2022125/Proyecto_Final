@@ -1,5 +1,11 @@
 import User from '../user/user.model.js'
 
+export const isRoleValid = async (role = '') => {
+    if (role !== "ADMIN" && role !== "CLIENT") {
+        throw new Error(`This role is invalid`);
+    }
+};
+
 export const existingEmail = async (email = '') => {
     const existeEmail = await User.findOne({email});
     if (existeEmail){

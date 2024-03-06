@@ -10,7 +10,7 @@ export const login = async (req, res) => {
 
     if (!user) {
       return res.status(400).json({
-        msg: "Incorrect credentials, does not exist in database",
+        msg: "The data you entered is incorrect, please enter existing data",
       });
     }
     if (!user.estado) {
