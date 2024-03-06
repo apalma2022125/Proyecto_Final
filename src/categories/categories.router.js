@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 import {validarCampos} from '../middlewares/validar-campos.js';
-import {validarJWT} from '../middlewares/validar-jwt.js;'
+import {validarJWT} from '../middlewares/validar-jwt.js'
 import {existCategoryByType} from '../helpers/db-validators.js';
 
 import {categoriesGet, categoryPut,categoriesPost,categoryDelete} from '../categories/categories.controller.js';
@@ -35,9 +35,12 @@ router.post(
     "/",
     [
         validarJWT,       
-        check('typeCategory', 'The product is required').not().isEmpty(),
+        check('typeCategory', 'The category is required').not().isEmpty(),
         check('typeCategory').custom(existCategoryByType),
         check('description', 'The description is required').not().isEmpty(),
         validarCampos
     ], categoriesPost
 );
+
+
+export default router;

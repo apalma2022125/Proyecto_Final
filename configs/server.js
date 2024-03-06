@@ -8,8 +8,8 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js';
 import categoryRoutes from '../src/categories/categories.router.js';
-
-
+import bcryptjs from 'bcryptjs';
+import User from '../src/user/user.model.js';
 
 class Server{
     constructor(){
@@ -27,6 +27,25 @@ class Server{
     async conectarDB(){
         await dbConnection();
     }
+
+    async createAdmins() {
+        const existsAdmin = await User.findOne({ role: 'ADMIN' });
+    
+        if (!existsAdmin) {
+            const uAdmin = {
+                nombre: 'admin',
+                correo: 'admin@gmail.com',
+                password: '111111',
+                role: 'ADMIN',
+            };
+    
+            const salt = bcryptjs.genSaltSync();
+            uAdmin.password = bcryptjs.hashSync(uAdmin.password, salt);
+    
+            await User.create(uAdmin);
+        }
+    }
+    
 
     middlewares(){
         this.app.use(express.urlencoded({extended: false}));
