@@ -20,3 +20,10 @@ export const existsUserById = async (id = '') => {
     }
 }
 
+export const existCategoryByType = async (typeCategory ='') =>{
+    const existeCategoria = await Category.findOne({typeCategory});
+    if(existeCategoria){
+        throw new Error(`This product:${typeCategory} is al ready exist`);
+    }
+}
+
