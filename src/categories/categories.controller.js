@@ -26,7 +26,7 @@ export const categoryPut = async (req, res = response) =>{
     const categoryUpdate = await Category.findByIdAndUpdate(id, resto, { new: true });
 
     res.status(200).json({
-        msg: 'Category has been update',
+        msg: 'This category has benn update',
         categoryUpdate
     });
 
@@ -39,7 +39,7 @@ export const categoryDelete = async (req, res) => {
     const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
-        msg: 'This CATEGORY was DELETED:',
+        msg: 'This category has benn removed',
         category,
         usuarioAutenticado
     });
