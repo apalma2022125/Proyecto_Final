@@ -52,48 +52,48 @@ export const productGetByName = async (req, res) => {
     });
 }
 
-export const productPut = async (req, res) => {
+export const productsPut = async (req, res) => {
     const { name } = req.params;
     const { _id, estado, category, ...resto } = req.body;
 
-    const producto = await Product.findOne({ nameProduct: name });
+    const product = await Product.findOne({ nameProduct: name });
 
-    if (!producto.estado) {
+    if (!product.estado) {
         return res.status(400).json({
             msg: "This product is not exist",
         });
     }
 
-    const productoActualizado = await Product.findByIdAndUpdate(producto._id, resto, { new: true });
+    const productUpdate = await Product.findByIdAndUpdate(product._id, resto, { new: true });
 
     res.status(200).json({
         msg: 'Your profuct has been Update',
-        productoActualizado
+        productUpdate
     });
 }
 
 export const productDelete = async (req, res) => {
     const { name } = req.params;
-    const producto = await Product.findOne({ nameProduct: name });
+    const product = await Product.findOne({ nameProduct: name });
 
-    if (!producto.estado) {
+    if (!product.estado) {
         return res.status(400).json({
             msg: "The product is not exist",
         });
     }
 
-    const productoEliminado = await Product.findByIdAndUpdate(producto._id, { estado: false });
-    const usuarioAutenticado = req.usuario;
+    const productRemoved = await Product.findByIdAndUpdate(product._id, { estado: false });
+    const userAuthenticated = req.usuario;
 
     res.status(200).json({
         msg: 'Your product has been removed',
-        productoEliminado,
-        usuarioAutenticado
+        productRemoved,
+        userAuthenticated
     });
 }
 
 
-export const productsInventory = async (req, res) => {
+export const inStock = async (req, res) => {
     const { limite, desde } = req.query;
     const query = { estado: true };
 
@@ -113,7 +113,9 @@ export const productsInventory = async (req, res) => {
     });
 }
 
-export const productsOutOfStock = async (req, res) => {
+
+
+export const noStock = async (req, res) => {
     const { limite, desde } = req.query;
     const query = { estado: true, stock: 0 };
 
@@ -135,7 +137,7 @@ export const productsOutOfStock = async (req, res) => {
     });
 }
 
-export const productsMostSelled = async (req, res) => {
+export const bestSellingProducts = async (req, res) => {
     const { limite, desde } = req.query;
     const query = { estado: true, totalSales: { $ne: 0 } };
 
