@@ -1,4 +1,5 @@
-import User from '../user/user.model.js'
+import User from '../user/user.model.js';
+import Category from '../categories/categories.model.js';
 
 export const isRoleValid = async (role = '') => {
     if (role !== "ADMIN" && role !== "CLIENT") {
@@ -23,7 +24,10 @@ export const existsUserById = async (id = '') => {
 export const existCategoryByType = async (typeCategory ='') =>{
     const existsCategory = await Category.findOne({typeCategory});
     if(existsCategory){
-        throw new Error(`This product:${typeCategory} is al ready exist`);
+        throw new Error(`This Category:${typeCategory} is al ready exist`);
     }
 }
+
+
+
 

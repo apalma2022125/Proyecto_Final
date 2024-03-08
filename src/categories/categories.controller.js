@@ -1,6 +1,7 @@
 import Category from './categories.model.js';
 import { response, request } from 'express';
 
+
 export const categoriesGet = async (req = request, res = response) => {
     const {limite, desde} = req.query;
     const query = {estado: true};
@@ -34,13 +35,13 @@ export const categoryPut = async (req, res = response) =>{
 
 export const categoryDelete = async (req, res) => {
     const {id} = req.params;
-    const category = await Category.findByIdAndUpdate(id, {estado: false});
-    const userAuthenticated = req.usuario;
+    const category = await Category.findByIdAndUpdate(id, {nameCategory: "Default Product", description: "A default product", estado: false});
+    const usuarioAutenticado = req.usuario;
 
     res.status(200).json({
-        msg: 'Category has been removed',
+        msg: 'This CATEGORY was DELETED:',
         category,
-        userAuthenticated
+        usuarioAutenticado
     });
 }
 

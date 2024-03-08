@@ -7,8 +7,7 @@ export const yourRole = (...roles) => (req, res, next) => {
 
     if (!roles.includes(req.user.role)) {
         return res.status(401).json({
-            msg: `You cannot do this action because your role is ${req.user.role},
-                 only these roles can do this action: ${roles}`
+            msg: 'This action can only be done by an administrator'
         });
     }
 

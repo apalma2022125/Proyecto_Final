@@ -19,6 +19,7 @@ class Server{
         this.authPath = '/ProyectFinalApi/v1/auth'
         this.categoriesPath = '/ProyectFinalApi/v1/categories'
 
+        this.createAdmins();
         this.middlewares();
         this.conectarDB();
         this.routes();
@@ -33,8 +34,8 @@ class Server{
     
         if (!existsAdmin) {
             const uAdmin = {
-                nombre: 'admin',
-                correo: 'admin@gmail.com',
+                name: 'admin',
+                email: 'admin@gmail.com',
                 password: '111111',
                 role: 'ADMIN',
             };
