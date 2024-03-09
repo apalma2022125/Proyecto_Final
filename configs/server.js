@@ -9,6 +9,7 @@ import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js';
 import categoryRoutes from '../src/categories/categories.routes.js';
 import productRoutes from '../src/products/products.routes.js'
+import invoiceRoutes from '../src/invoice/invoice.routes.js'
 import bcryptjs from 'bcryptjs';
 import User from '../src/user/user.model.js';
 
@@ -20,6 +21,7 @@ class Server{
         this.authPath = '/ProyectFinalApi/v1/auth'
         this.categoriesPath = '/ProyectFinalApi/v1/categories'
         this.productPath = '/ProyectFinalApi/v1/products'
+        this.invoicePath = '/ProyectFinalApi/v1/invoices'
 
 
         this.createAdmins();
@@ -64,6 +66,7 @@ class Server{
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoriesPath, categoryRoutes);
         this.app.use(this.productPath, productRoutes);
+        this.app.use(this.invoicePath, invoiceRoutes);
     }
 
     listen(){

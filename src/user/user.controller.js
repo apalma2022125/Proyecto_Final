@@ -66,12 +66,32 @@ export const userPost = async (req, res) => {
 }
 
 
-export const userDelete = async (req = request, res = response) => {
-    const { id } = req.params;
+export const deleteAccount = async (req, res) => {
+    const user = req.user;
+    const { confirmation, password } = req.body;
 
-    const user = await User.findByIdAndUpdate(id, { estado: false });
+    if(user.role.toString() === "CLIENT"){
+
+        if(confirmation !== "CONFIRM"){
+            res.status(200).json({
+                msg: 'Write "CONFIRM" to delete this account'
+            });
+        }
+
+        const validPassword = bcryptjs.compareSync(password, user.password);
+         if(!validPassword){
+            return res.status(400).json({
+                msg: "Incorrect password"
+            })
+         }
+    }
+
+    const use = await User.findByIdAndUpdate(user._id, { estado: false });
     const userAuthenticated = req.user;
 
-    res.status(200).json({ msg: 'user has been removed', user, userAuthenticated });
-
+    res.status(200).json({
+        msg: 'This user was DELETED:',
+        use,
+        userAuthenticated
+    });
 }

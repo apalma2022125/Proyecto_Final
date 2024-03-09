@@ -1,6 +1,7 @@
 import User from '../user/user.model.js';
 import Category from '../categories/categories.model.js';
 import Product from '../products/products.model.js';
+import Invoice from '../invoice/invoice.model.js';
 
 
 

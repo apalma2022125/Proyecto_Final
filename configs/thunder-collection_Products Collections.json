@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "Products Collections",
-    "dateExported": "2024-03-09T03:38:23.846Z",
+    "dateExported": "2024-03-09T05:55:03.262Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "c7da9a5a-e7bb-4e1f-811c-a3213e2d8591",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "e22596cd-2134-4259-be7b-cea81d777d23",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Products Post",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-08T10:35:28.529Z",
-            "modified": "2024-03-09T03:11:34.160Z",
+            "created": "2024-03-09T05:54:19.698Z",
+            "modified": "2024-03-09T05:54:19.698Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -30,15 +30,15 @@
             "tests": []
         },
         {
-            "_id": "fb7f5365-7f54-43d2-9eaf-06320443bfa3",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "1956571b-4a4c-4520-b40d-ddd0fdafae81",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Product Get",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/",
             "method": "GET",
             "sortNum": 20000,
-            "created": "2024-03-08T10:59:07.396Z",
-            "modified": "2024-03-09T03:09:53.738Z",
+            "created": "2024-03-09T05:54:19.700Z",
+            "modified": "2024-03-09T05:54:19.700Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -49,15 +49,15 @@
             "tests": []
         },
         {
-            "_id": "0bbccf02-e3b9-471e-a868-2f33d3542cbb",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "8f88cabe-349f-4a1b-8807-2eb1747944b1",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Get Product By Name",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2024-03-08T10:59:44.967Z",
-            "modified": "2024-03-09T03:11:48.237Z",
+            "created": "2024-03-09T05:54:19.701Z",
+            "modified": "2024-03-09T05:54:19.701Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -68,15 +68,15 @@
             "tests": []
         },
         {
-            "_id": "6321dd5b-d5c7-492f-90fb-e1af96149496",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "ec0ecce2-923a-4837-bb24-003456f2945c",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Product Put",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2024-03-08T11:00:46.734Z",
-            "modified": "2024-03-09T03:11:57.949Z",
+            "created": "2024-03-09T05:54:19.702Z",
+            "modified": "2024-03-09T05:54:19.702Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -92,15 +92,15 @@
             "tests": []
         },
         {
-            "_id": "c0606f66-98e8-4035-9dab-18045f7f4395",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "b67d74c3-cee4-4aa0-9d4b-ab2a0ea4940e",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Product Delete",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
             "method": "DELETE",
             "sortNum": 50000,
-            "created": "2024-03-08T11:02:54.609Z",
-            "modified": "2024-03-09T03:13:00.662Z",
+            "created": "2024-03-09T05:54:19.703Z",
+            "modified": "2024-03-09T05:54:19.703Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -111,15 +111,15 @@
             "tests": []
         },
         {
-            "_id": "a246d959-16b7-4d44-ba0f-444dffbab078",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "c8c3f5c2-4bd8-4639-8bf7-68e703d0f74e",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "stock",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/inStock",
             "method": "GET",
             "sortNum": 60000,
-            "created": "2024-03-09T03:21:43.077Z",
-            "modified": "2024-03-09T03:34:54.735Z",
+            "created": "2024-03-09T05:54:19.704Z",
+            "modified": "2024-03-09T05:54:19.704Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -127,19 +127,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "9710cc7f-406c-4478-9279-f3cfa1fa7a96",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "9569e618-7b17-443e-aaaa-9344922059cd",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "No stock",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/noStock",
             "method": "GET",
             "sortNum": 70000,
-            "created": "2024-03-09T03:22:03.222Z",
-            "modified": "2024-03-09T03:35:35.387Z",
+            "created": "2024-03-09T05:54:19.705Z",
+            "modified": "2024-03-09T05:54:19.705Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -147,19 +146,18 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         },
         {
-            "_id": "b72982fa-1f41-4c34-b339-8c1e6cb86084",
-            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "_id": "22a1132d-38fa-493d-9cb4-434dc771c51e",
+            "colId": "0e4cd577-34a2-4cb5-ab62-23a196796fc1",
             "containerId": "",
             "name": "Best Selling Products",
             "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/bestSellingProducts",
             "method": "GET",
             "sortNum": 90000,
-            "created": "2024-03-09T03:31:51.003Z",
-            "modified": "2024-03-09T03:36:10.805Z",
+            "created": "2024-03-09T05:54:19.706Z",
+            "modified": "2024-03-09T05:54:19.706Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -167,7 +165,6 @@
                 }
             ],
             "params": [],
-            "reqType": "get",
             "tests": []
         }
     ]

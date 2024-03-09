@@ -1,12 +1,10 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
-
 import {existingEmail,existsUserById, isRoleValid} from "../helpers/db-validators.js";
-import {userGet, getUserById, userPut, userDelete, userPost} from "../user/user.controller.js";
-
+import {userGet, getUserById, userPut, userPost, deleteAccount} from "../user/user.controller.js";
 import { validarCampos } from '../middlewares/validar-campos.js';
 import {validarJWT} from '../middlewares/validar-jwt.js'
-
+import {yourRole} from '../middlewares/validar-rol.js'
 
 const router = Router();
 
@@ -26,6 +24,7 @@ router.put(
     "/:id",
     [
         validarJWT,
+        yourRole("ADMIN"),
         check("id", "This id is not valid").isMongoId(),
         check("id").custom(existsUserById),
         check("role").custom(isRoleValid),
@@ -46,14 +45,14 @@ router.post(
     ],userPost);
 
 
-router.delete(
-    "/:id",
-    [
-        validarJWT,
-        check("id", "This id is not valid").isMongoId(),
-        check("id").custom(existsUserById),
-        check("role").custom(isRoleValid),
-        validarCampos,
-    ],userDelete);
+    router.delete(
+        "/deleteAccount/Client",
+        [
+            validarJWT,
+            yourRole("CLIENT"),
+            check("confirmation", "The password is required").not().isEmpty(),
+            check("password", "The password is required").not().isEmpty(),
+            validarCampos
+        ], deleteAccount);
 
     export default router;
