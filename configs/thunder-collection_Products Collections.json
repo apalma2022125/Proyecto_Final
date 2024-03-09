@@ -1,0 +1,174 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Products Collections",
+    "dateExported": "2024-03-09T03:38:23.846Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c7da9a5a-e7bb-4e1f-811c-a3213e2d8591",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Products Post",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-08T10:35:28.529Z",
+            "modified": "2024-03-09T03:11:34.160Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProduct\": \"Tortrix\",\n  \"description\": \"Ricito echo de maiz con sabor a babacoa\",\n  \"price\": 2,\n  \"category\": \"Comida\",\n  \"stock\": 50\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb7f5365-7f54-43d2-9eaf-06320443bfa3",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Product Get",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-08T10:59:07.396Z",
+            "modified": "2024-03-09T03:09:53.738Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0bbccf02-e3b9-471e-a868-2f33d3542cbb",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Get Product By Name",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-08T10:59:44.967Z",
+            "modified": "2024-03-09T03:11:48.237Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6321dd5b-d5c7-492f-90fb-e1af96149496",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Product Put",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-08T11:00:46.734Z",
+            "modified": "2024-03-09T03:11:57.949Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameProduct\": \"Sopa Laky\",\n  \"description\": \"Sopa procesada, con diferentes sabores\",\n  \"price\": 5,\n  \"category\": \"Comida\",\n  \"stock\": 20\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "c0606f66-98e8-4035-9dab-18045f7f4395",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Product Delete",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/Tortrix",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-08T11:02:54.609Z",
+            "modified": "2024-03-09T03:13:00.662Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a246d959-16b7-4d44-ba0f-444dffbab078",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "stock",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/inStock",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-09T03:21:43.077Z",
+            "modified": "2024-03-09T03:34:54.735Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "9710cc7f-406c-4478-9279-f3cfa1fa7a96",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "No stock",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/noStock",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-03-09T03:22:03.222Z",
+            "modified": "2024-03-09T03:35:35.387Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b72982fa-1f41-4c34-b339-8c1e6cb86084",
+            "colId": "786d0cf7-52ab-4610-be82-e566733ac5dc",
+            "containerId": "",
+            "name": "Best Selling Products",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/products/get/bestSellingProducts",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-03-09T03:31:51.003Z",
+            "modified": "2024-03-09T03:36:10.805Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWVhOTI3YjY0ZWJhZjA1NzM5ZTNmMzUiLCJpYXQiOjE3MDk5NTM3NTcsImV4cCI6MTcwOTk2MDk1N30.sDlThyugVzoaTwg0EdaK3MuCeLoQQQ5dp82CY6K9So8"
+                }
+            ],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}

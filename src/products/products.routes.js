@@ -22,7 +22,7 @@ router.post(
     "/",
     [
         validarJWT,
-        esRole("ADMIN"),
+        yourRole("ADMIN"),
         check('nameProduct', 'The name of the product is required').not().isEmpty(),
         check('nameProduct').custom(existingProduct),
         check('description', 'The description of the product is required').not().isEmpty(),
@@ -64,7 +64,7 @@ router.delete(
     "/:name",
     [
         validarJWT,
-        esRole("ADMIN_ROLE"),
+        yourRole("ADMIN"),
         check('name').custom(isProductValid),
         validarCampos
     ], productDelete
@@ -72,13 +72,13 @@ router.delete(
 
 
 router.get(
-    "/get/inStock",[validarJWT,esRole("ADMIN"),],inStock);
+    "/get/inStock",[validarJWT,yourRole("ADMIN"),],inStock);
 
 router.get(
     "/get/noStock",
     [
         validarJWT,
-        esRole("ADMIN"),
+        yourRole("ADMIN"),
     ],
     noStock
 );
@@ -87,7 +87,7 @@ router.get(
     "/get/bestSellingProducts",
     [
         validarJWT,
-        esRole("ADMIN"),
+        yourRole("ADMIN"),
     ],
     bestSellingProducts
 );

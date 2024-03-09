@@ -1,34 +1,37 @@
 import mongoose from 'mongoose';
 
 const ProductsSchema = mongoose.Schema({
-    nameProduct:{
+    nameProduct: {
         type: String,
         required: [true, 'The name is required']
-    }, 
-    description:{
+    },
+    description: {
         type: String,
         required: [true, 'The description is required']
     },
-    price:{
+    price: {
         type: Number,
         required: [true, 'The price is required']
     },
-    category:{
+    category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
     },
-    stock:{
+    stock: {
         type: Number,
         required: [true, 'The stock is required when creating a product']
     },
-    estado:{
-        type: Boolean,
-        default: true
-    }
+    totalSales: {
+    type: Number
+},
+    estado: {
+    type: Boolean,
+    default: true
+}
 });
 
-ProductsSchema.methods.toJSON = function(){
-    const{ __v, _id, ...product} = this.toObject();
+ProductsSchema.methods.toJSON = function () {
+    const { __v, _id, ...product } = this.toObject();
     product.PRODUCT_ID = _id;
     return product;
 };

@@ -4,7 +4,7 @@ import {validarCampos} from '../middlewares/validar-campos.js';
 import {validarJWT} from '../middlewares/validar-jwt.js'
 import {existCategoryByType} from '../helpers/db-validators.js';
 
-import {categoriesGet, categoryPut,categoriesPost,categoryDelete} from '../categories/categories.controller.js';
+import {categoriesGet, categoryPut,categoriesPost,categoryDelete} from './categories.controller.js';
 import {yourRole} from '../middlewares/validar-rol.js'
 
 const router = Router();

@@ -1,0 +1,101 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Users Collection",
+    "dateExported": "2024-03-09T03:16:27.304Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "3204267a-94b2-4ac7-a225-887a0df6b99d",
+            "colId": "19eef883-d202-4fc2-943c-f7d8d7a64ad4",
+            "containerId": "",
+            "name": "Post User",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-06T06:56:13.210Z",
+            "modified": "2024-03-06T06:59:20.731Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"user2\",\n  \"email\": \"User2@gmail.com\",\n  \"password\": \"111111\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "82d31a7a-7203-48a2-b4da-b4bd2f3e62a3",
+            "colId": "19eef883-d202-4fc2-943c-f7d8d7a64ad4",
+            "containerId": "",
+            "name": "Get User",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-06T06:58:04.538Z",
+            "modified": "2024-03-06T06:58:10.955Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "60392c6d-a89c-4efa-9cad-2c67fa175135",
+            "colId": "19eef883-d202-4fc2-943c-f7d8d7a64ad4",
+            "containerId": "",
+            "name": "Get User By Id",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/user/65e814482228a9e3902f6d50",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-03-06T06:58:25.264Z",
+            "modified": "2024-03-06T06:59:34.974Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "69c1efb7-1a54-4866-a26a-ad9b895d8ddf",
+            "colId": "19eef883-d202-4fc2-943c-f7d8d7a64ad4",
+            "containerId": "",
+            "name": "Put  User",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/user/65e814482228a9e3902f6d50",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-03-06T06:59:08.548Z",
+            "modified": "2024-03-06T07:04:20.821Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4MTQ0ODIyMjhhOWUzOTAyZjZkNTAiLCJpYXQiOjE3MDk3MDg2NDYsImV4cCI6MTcwOTcxNTg0Nn0.4-HMmle0w_EIy8mWK40uLYHGHl4ij9ujOMWGEoicsOI"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Admin 3\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "b0f479e6-056c-4499-9324-38aaeaeda026",
+            "colId": "19eef883-d202-4fc2-943c-f7d8d7a64ad4",
+            "containerId": "",
+            "name": "Delete User",
+            "url": "http://localhost:3000/ProyectFinalApi/v1/user/65e814482228a9e3902f6d50",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-03-06T07:00:25.583Z",
+            "modified": "2024-03-06T07:04:32.713Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWU4MTQ0ODIyMjhhOWUzOTAyZjZkNTAiLCJpYXQiOjE3MDk3MDg2NDYsImV4cCI6MTcwOTcxNTg0Nn0.4-HMmle0w_EIy8mWK40uLYHGHl4ij9ujOMWGEoicsOI"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

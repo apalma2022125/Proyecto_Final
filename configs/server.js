@@ -7,7 +7,8 @@ import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/user/user.routes.js'
 import authRoutes from '../src/auth/auth.routes.js';
-import categoryRoutes from '../src/categories/categories.router.js';
+import categoryRoutes from '../src/categories/categories.routes.js';
+import productRoutes from '../src/products/products.routes.js'
 import bcryptjs from 'bcryptjs';
 import User from '../src/user/user.model.js';
 
@@ -18,6 +19,8 @@ class Server{
         this.userPath = '/ProyectFinalApi/v1/user'
         this.authPath = '/ProyectFinalApi/v1/auth'
         this.categoriesPath = '/ProyectFinalApi/v1/categories'
+        this.productPath = '/ProyectFinalApi/v1/products'
+
 
         this.createAdmins();
         this.middlewares();
@@ -60,6 +63,7 @@ class Server{
         this.app.use(this.userPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.categoriesPath, categoryRoutes);
+        this.app.use(this.productPath, productRoutes);
     }
 
     listen(){

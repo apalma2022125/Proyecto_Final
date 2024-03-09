@@ -4,7 +4,7 @@ import Category from '../categories/categories.model.js';
 
 export const productPost = async (req, res) => {
     const { nameProduct, description, price, category, stock } = req.body;
-    const categoryFound = await Category.findOne({ nameCategory: category });
+    const categoryFound = await Category.findOne({ typeCategory: category });
     const product = new Product({ nameProduct, description, price: parseInt(price), category: categoryFound._id, stock: parseInt(stock), totalSales: 0 });
 
     await product.save();
@@ -67,7 +67,7 @@ export const productsPut = async (req, res) => {
     const productUpdate = await Product.findByIdAndUpdate(product._id, resto, { new: true });
 
     res.status(200).json({
-        msg: 'Your profuct has been Update',
+        msg: 'Your product has been Update',
         productUpdate
     });
 }

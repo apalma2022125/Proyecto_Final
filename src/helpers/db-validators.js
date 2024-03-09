@@ -55,10 +55,10 @@ export const existStock = async (nameProduct ='', productQuantity ='') =>{
 }
 
 
-export const categoryAssignment = async (nameCategory ='') =>{
-    const existsCategory = await Category.findOne({nameCategory});
+export const categoryAssignment = async (typeCategory ='') =>{
+    const existsCategory = await Category.findOne({typeCategory});
     if(!existsCategory){
-        throw new Error('This category i dont exist');
+        throw new Error('This category is dont exist');
     }
 }
 
