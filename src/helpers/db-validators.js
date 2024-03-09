@@ -75,6 +75,23 @@ export const thereIsInPrice = async (price = '')=>{
     }
 }
 
+export const existInvoiceById = async (id = '') =>{
+    const existInvoice = await Invoice.findById(id);
+    if(!existInvoice){
+        throw new Error('This invoice is not exist');
+    }
+}
+
+
+
+export const thereAreEsxistences = async (nameProduct ='', howManyProducts ='') =>{
+    const existingProduct = await Product.findOne({nameProduct});
+    if( existingProduct.stock < howManyProducts){
+        return false;
+    }
+    return true;
+}
+
 
 
 
